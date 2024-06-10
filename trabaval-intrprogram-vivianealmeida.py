@@ -2,9 +2,10 @@
 
 import random
 
+userListStars = []
+userListNumbers = []
 listNumbers = []
 listStars = []
-
 
 #função para gerar números aleatórios
 def generateRandomNumber(num1, num2):
@@ -15,6 +16,36 @@ def isUniqueNumber(listNumber, number):
         if(i == number):
             return False
     return True
+
+#função criada para validar se o caractere digitado é um número e se é válido (entre o range)
+def requestValidNumbers(minValue, maxValue):
+    while True:
+        numberUser = (input(f"Indique um numero entre {minValue}  e {maxValue}:"))
+        if numberUser.isdigit():
+            numberInt = int(numberUser)
+            if numberInt < minValue or numberInt > maxValue:
+                print(f"O número {numberInt} não é válido.")
+            else:
+                return numberInt
+        else:
+            print("Esse não é um digito válido.")
+
+        
+def requestLotteryGameToUser():
+    while(len(userListNumbers) < 5):
+        numberAdded = requestValidNumbers(1, 50)
+        if numberAdded in userListNumbers:
+            print(f"O número {numberAdded} já existe.")
+        else:
+            userListNumbers.append(numberAdded)
+
+def requestNumberStarsToUser():
+    while(len(userListStars) < 2):
+        numberAdded = requestValidNumbers(1, 12)
+        if numberAdded in userListStars:
+            print(f"O número {numberAdded} já existe.")
+        else:
+            userListStars.append(numberAdded)
 
 #obs: não foi utilizado 'not in' nas duas funções pois não tinha certeza se contava como função built in (como choices). Então fiz uma de cada, para prática.
 while (len(listNumbers) < 5):
@@ -33,3 +64,4 @@ while (len(listStars) < 2):
 
 print(listNumbers)
 print(listStars)
+print(userListNumbers)
