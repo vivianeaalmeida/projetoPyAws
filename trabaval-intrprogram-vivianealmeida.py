@@ -87,7 +87,7 @@ print(f"Lista de Estrelas Sorteadas{listStars}")
 print(f"Quantidade de acerto de números: {numberMatches}") 
 print(f"Quantidade de acerto de estrelas: {starsMatches}") 
 
-#atribuição de premios
+#atribuição de premios (fonte: https://pt.wikipedia.org/wiki/Euromilhões)
 if numberMatches == 5 and starsMatches == 2:
     print("Premio: 17.000.000€")
 elif numberMatches == 5 and starsMatches == 1:
