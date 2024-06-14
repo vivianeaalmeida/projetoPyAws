@@ -21,10 +21,6 @@ Para executar o programa, basta rodar o script em Python. O usuário será solic
 
 **Nota:** Certifique-se de ter o Python instalado em seu sistema para executar o programa.
 
-## Como Contribuir:
-
-Se você deseja contribuir para este projeto, sinta-se à vontade para enviar sugestões, correções de bugs ou melhorias através de pull requests. Se encontrar algum problema, por favor, abra uma issue descrevendo-o detalhadamente.
-
 ## Avisos Legais:
 
 Este programa foi desenvolvido apenas para fins educacionais e de entretenimento. Não há qualquer vínculo com o jogo Euromilhões oficial ou seus organizadores.
